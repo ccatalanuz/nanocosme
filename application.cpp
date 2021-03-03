@@ -55,8 +55,6 @@ void setup() {
 void loop1(int period_ms = 1000) {
   static int valor = 0;
 
-  printf(".\n");
-  
   set_name(TOPIC_1, valor++);
 
 //  publish(FOO_LIST);
