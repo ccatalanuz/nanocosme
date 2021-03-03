@@ -153,7 +153,7 @@ void init_gateway_mqtt() {
   char mqtt_host[LENGTH_STRING];
   char clientID[LENGTH_NAME];
 
-  strcpy(mqtt_host, get_config("mqtt_host"));
+  strcpy(mqtt_host, get_config("mqtt_broker"));
   strcpy(clientID, get_config("applicationID"));
 
   MQTTAsync_create(&client, mqtt_host, clientID, MQTTCLIENT_PERSISTENCE_NONE, NULL);
