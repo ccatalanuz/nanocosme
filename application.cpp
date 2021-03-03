@@ -38,7 +38,7 @@ void setup() {
   set_name(TOPIC_1, 0);
   
   new_name(TOPIC_2, STRING_NAME, TOPIC_2_LENGTH);
-  set_name(TOPIC_2, "prueba");  
+  set_name(TOPIC_2, "test");  
   
   new_name(TOPIC_3, DOUBLE_NAME);
   set_name(TOPIC_3, 0);
