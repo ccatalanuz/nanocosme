@@ -95,15 +95,15 @@ void on_mqtt_name_arrived(const char *name) {
     
   if (strcmp(type, INT_NAME) == 0) {
     get_name(name, &value_1);
-    printf("Recibido %s = %d\n", name, value_1);      
+    printf("Arrived %s = %d\n", name, value_1);      
   
   } else if (strcmp(type, STRING_NAME) == 0) {
     get_name(name, value_2);
-    printf("Recibido %s = %s\n", name, value_2);      
+    printf("Arrived %s = %s\n", name, value_2);      
     
   } else if (strcmp(type, DOUBLE_NAME) == 0) {
     get_name(name, &value_3);
-    printf("Recibido %s = %f\n", name, value_3);      
+    printf("Arrived %s = %f\n", name, value_3);      
   }
 }
 
