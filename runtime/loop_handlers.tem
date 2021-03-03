@@ -91,7 +91,6 @@ struct loop_handler_param {
 }; 
 
 long long nsec;
-//int go = 0;	// set 1 in gateway
 int go = 1;
 
 /************************************************
