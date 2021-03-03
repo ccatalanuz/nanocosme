@@ -1,0 +1,57 @@
+#
+#   nanocosme
+# 
+#   CCC 03/2021
+#
+
+case "$1" in
+start)
+	$0 stop		
+        case "$2" in
+        -v)
+           sudo -E ./nanocosme_app &
+           ;;
+        *)
+           sudo -E ./nanocosme_app & #/dev/null 2>&1       
+           ;;
+        esac
+        ;;
+stop)
+        case "$2" in
+        -v)
+           ps aux | grep ./nanocosme_app | grep RLl | awk '{ print $2 }' | head -n 1 > nanocosme_app.pid
+           if [ -s "./nanocosme_app.pid" ]; then  
+             sudo kill -s SIGINT `cat nanocosme_app.pid` > /dev/null 2>&1
+             rm ./nanocosme_app.pid
+           fi
+           ;;
+        *)
+           ps aux | grep ./nanocosme_app | grep RLl | awk '{ print $2 }' | head -n 1 > nanocosme_app.pid
+           if [ -s "./nanocosme_app.pid" ]; then  
+             sudo kill -s SIGINT `cat nanocosme_app.pid` > /dev/null 2>&1
+             rm ./nanocosme_app.pid
+           fi
+           ;;
+
+        esac
+	;;
+
+restart)
+	echo "Restarting nanoCOSME..."
+	$0 stop
+	sleep 1
+	$0 start
+	;;
+
+status)
+        echo "COSME status..."
+        ;;
+
+*)
+	echo "Usage: $0 {start | stop | restart | status} [-v]"
+	exit 1
+	;;
+
+esac
+exit 0
+
