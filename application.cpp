@@ -31,11 +31,6 @@
 
 #define FOO_LIST "foo_list"
 
-
-struct timespec inicial, final;
-double tiempo;
-
-
 void setup() {
   printf("Executing setup...\n"); 
   
