@@ -4,5 +4,5 @@
 <comment>NanoCosmeGatewayConfig</comment>
 <entry key="partnerID">partner1</entry>
 <entry key="applicationID">nanoCOSME</entry>
-<entry key="mqtt_host">155.210.68.101</entry>
+<entry key="mqtt_broker">IP_BROKER</entry>
 </properties>
