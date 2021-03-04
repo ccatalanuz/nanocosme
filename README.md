@@ -1,5 +1,5 @@
 # nanocosme
-NanoCOSME is a CPS programming framework for Raspberry Pi.
+NanoCOSME is a Cyber-Physical System (CPS) programming framework for Raspberry Pi.
 
 The framework extends the Arduino programming model to facilitate multitasking and communication between devices.
 
